@@ -1,4 +1,4 @@
-package kr.gyk.adobby.unsolved_backend.dto.problem;
+package kr.gyk.adobby.unsolvedfrontend.dto.problem;
 
 import lombok.Builder;
 import lombok.Getter;

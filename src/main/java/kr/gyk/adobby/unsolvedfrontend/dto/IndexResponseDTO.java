@@ -1,4 +1,4 @@
-package kr.gyk.adobby.demo.dto;
+package kr.gyk.adobby.unsolvedfrontend.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
