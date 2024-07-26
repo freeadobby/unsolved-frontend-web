@@ -7,10 +7,7 @@
 <body>
 <div class="login">
 <h5>로그인</h5>
-<form th:action="@{/mypage}" th:object="${}" method="post">
-    <div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
-        <div th:each="err : ${#fields.allErrors()}" th:text="${err}" />
-    </div>
+<form th:action="@{#}" method="post">
     <div class="mb-3">
         <label for="email" class="form-label">이메일</label>
         <input type="text" name="email" id="email" class="form-control">
