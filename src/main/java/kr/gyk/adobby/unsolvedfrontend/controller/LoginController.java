@@ -1,28 +1,32 @@
 package kr.gyk.adobby.unsolvedfrontend.controller;
 
 import kr.gyk.adobby.unsolvedfrontend.dto.user.SignRequestDTO;
+import kr.gyk.adobby.unsolvedfrontend.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+@RequiredArgsConstructor
 @Controller
 public class LoginController {
 
-    @GetMapping("/login")
+    private final UserService userService;
+
+    @GetMapping("/")
+    public String index() {
+        return "mypage.html";
+    }
+
+    @GetMapping("user/login")
     public String login(){
         return "login.html";
     }
 
-    @PostMapping("/login")
+    @PostMapping("user/login")
     public String loginPost(SignRequestDTO signRequestDTO){
-        SignRequestDTO.builder()
-                .email("email")
-                .password("password")
-                .build();
-        if(signRequestDTO.getEmail().equals("배현호")){
-            if(signRequestDTO.getPassword().equals("배현호")){
-                return "mypage.html";
-            }
+        if(userService.postUserObject(signRequestDTO) != null) {
+                return "redirect:/";
         }
         return "login.html";
     }
