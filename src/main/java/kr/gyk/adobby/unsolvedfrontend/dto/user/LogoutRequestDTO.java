@@ -1,4 +1,4 @@
-package kr.gyk.adobby.demo.dto.user;
+package kr.gyk.adobby.unsolvedfrontend.dto.user;
 
 import lombok.Builder;
 import lombok.Getter;
