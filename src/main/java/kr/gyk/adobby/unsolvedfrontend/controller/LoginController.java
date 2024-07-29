@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequiredArgsConstructor
 @Controller
@@ -20,7 +21,7 @@ public class LoginController {
 
     @GetMapping("/user/login")
     public String login(){
-        return "loginPage.html";
+        return "pages/loginPage.html";
     }
 
     @PostMapping("/user/login")
@@ -28,11 +29,16 @@ public class LoginController {
         if(userService.postUserObject(signRequestDTO) != null) {
                 return "redirect:/";
         }
-        return "loginPage.html";
+        return "pages/loginPage.html";
     }
 
     @GetMapping("/user")
     public String register(){
-        return "registerPage.html";
+        return "pages/registerPage.html";
+    }
+
+    @GetMapping("/user/myPage")
+    public String myPage(){
+        return "pages/myPage.html";
     }
 }
