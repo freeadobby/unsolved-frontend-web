@@ -18,16 +18,21 @@ public class LoginController {
         return "common/layout.html";
     }
 
-    @GetMapping("user/login")
+    @GetMapping("/user/login")
     public String login(){
         return "loginPage.html";
     }
 
-    @PostMapping("user/login")
+    @PostMapping("/user/login")
     public String loginPost(SignRequestDTO signRequestDTO){
         if(userService.postUserObject(signRequestDTO) != null) {
                 return "redirect:/";
         }
         return "loginPage.html";
+    }
+
+    @GetMapping("/user")
+    public String register(){
+        return "registerPage.html";
     }
 }
