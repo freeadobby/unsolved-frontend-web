@@ -15,12 +15,12 @@ public class LoginController {
 
     @GetMapping("/")
     public String index() {
-        return "mypage.html";
+        return "common/layout.html";
     }
 
     @GetMapping("user/login")
     public String login(){
-        return "login.html";
+        return "loginPage.html";
     }
 
     @PostMapping("user/login")
@@ -28,6 +28,6 @@ public class LoginController {
         if(userService.postUserObject(signRequestDTO) != null) {
                 return "redirect:/";
         }
-        return "login.html";
+        return "loginPage.html";
     }
 }
