@@ -4,7 +4,35 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{common/layout.html}">
 <div th:fragment="myInfoFragment">
-    <div style="width:1300px; height:100px; background-color:blue"></div>
-    <img src="https://static.solved.ac/misc/360x360/default_profile.png" alt="qogusgh0405" class="css-1q631t7">
+    <div style="width:1300px; height:100px; background-color:skyblue"></div>
+    <div class="container d-flex align-items-center">
+        <img class="rounded-circle me-1"
+             width="150"
+             height="150"
+             src="https://avatars.githubusercontent.com/u/137270898?s=96&v=4"
+             alt
+             style="position:relative; left:50px; bottom:40px">
+        <p style="position:relative; left:70px; bottom:20px; font-size:35px">홍길동</p>
+        <p style="position:relative; right:30px; top:10px">Diamond I(대충 임시티어)</p>
+        <div class="progress" style="position:relative; width:50%; right:220px; top:30px; height:25px">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow=""
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                style="width:50%">50%</div>
+        </div>
+    </div>
+    <div class="d-flex gap-4 justify-content-center py-5">
+        <
+        <p class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Secondary</p>
+        <p class="badge bg-success-subtle text-success-emphasis rounded-pill">Success</p>
+        <p class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Danger</p>
+        <p class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Warning</p>
+        <p class="badge bg-info-subtle text-info-emphasis rounded-pill">Info</p>
+        <p class="badge bg-light-subtle text-light-emphasis rounded-pill">Light</p>
+        <p class="badge bg-dark-subtle text-dark-emphasis rounded-pill">Dark</p>
+    </div>
+
 </div>
 </html>
