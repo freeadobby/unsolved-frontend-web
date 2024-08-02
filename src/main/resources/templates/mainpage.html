@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>unSolved</title>
+  <link href="/mainpage.css" rel="stylesheet">
+
+  <!--temporary bootstrap head beacuse can't get the thymleaf layout to fucking work-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<p class="lead">
-  김기유님 안녕하세요!
-</p>
+<main>
+<div class="container py-4">
+
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">안녕하세요 기유님!</h1>
+      <p class="col-md-8 fs-4">오늘도 활기찬 하루 어쩌고 예아 좋습니다. 이거 문장 몇개 만들어두면 좋을 듯. 간단하게</p>
+    </div>
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2>추천 문제</h2>
+        <p>오늘 학습 추천드리는 문제에양</p>
+        <!-- place for question-window-->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>복습 문제</h2>
+        <p>골딱이에게 복습을 권장 드리는 문제에양</p>
+        <!-- place for question-window-->
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
 </body>
 </html>
