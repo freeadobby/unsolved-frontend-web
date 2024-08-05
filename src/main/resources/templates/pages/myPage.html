@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout}">
 
-<head th:replace="~{common/fragment/head :: commonHead}">
-</head>
-
-<body>
-<div class="container">
-    <div th:replace="~{common/fragment/header :: commonHeader}"></div>
+<div layout:fragment="content">
     <div th:replace="~{common/fragment/myInfo :: myInfoFragment}"></div>
 </div>
-</body>
 
 </html>
