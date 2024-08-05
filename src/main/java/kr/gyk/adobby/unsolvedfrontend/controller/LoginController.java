@@ -37,8 +37,4 @@ public class LoginController {
         return "pages/registerPage.html";
     }
 
-    @GetMapping("/user/myPage")
-    public String myPage(){
-        return "pages/myPage.html";
-    }
 }
