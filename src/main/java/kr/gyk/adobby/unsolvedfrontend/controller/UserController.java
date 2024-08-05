@@ -20,8 +20,15 @@ public class UserController {
     public String myPageSolved(){
         return "pages/myPage_solved.html";
     }
+
     @GetMapping("/user/myPage/history")
     public String myPageHistory(){
         return "pages/myPage_history.html";
     }
+
+    @GetMapping("/user/myPage/overView")
+    public String myPageOverView(){
+        return "pages/myPage_overView.html";
+    }
+
 }
