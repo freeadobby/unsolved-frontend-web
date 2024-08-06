@@ -9,7 +9,10 @@
 <body>
   <div th:replace="common/fragment/header :: commonHeader"></div>
 
-  <th:block layout:fragment="Content"></th:block>
+<div th:replace="common/fragment/header :: commonHeader"></div>
+
+<th:block layout:fragment="Content"></th:block>
+
 </body>
 
 </html>
