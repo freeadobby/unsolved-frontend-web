@@ -12,8 +12,10 @@
              src="https://avatars.githubusercontent.com/u/137270898?s=96&v=4"
              alt
              style="position:relative; left:50px; bottom:40px">
-        <p style="position:relative; left:70px; bottom:20px; font-size:35px">홍길동</p>
-        <p style="position:relative; right:30px; top:10px">Diamond I(대충 임시티어)</p>
+        <p class="fw-bold"
+           style="position:relative; left:70px; bottom:20px; font-size:35px">홍길동</p>
+        <p class="fw-bold"
+           style="position:relative; right:30px; top:10px">Diamond I(대충 임시티어)</p>
         <div class="progress" style="position:relative; width:50%; right:220px; top:30px; height:25px">
             <div class="progress-bar"
                  role="progressbar"
@@ -67,6 +69,13 @@
                         plugins: {
                           title: {
                               display: true
+                          }
+                        },
+                        scales: {
+                          r: {
+                              ticks: {
+                                  stepSize: 20
+                              }
                           }
                         }
                     }
