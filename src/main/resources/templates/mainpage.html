@@ -13,11 +13,29 @@
 <body>
 <main>
   <div class="container py-4">
-
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">안녕하세요 기유님!</h1>
-        <p class="col-md-8 fs-4">오늘도 활기찬 하루 어쩌고. 이거 문장 몇개 만들어두면 좋을 듯. 간단하게</p>
+        <div class="row gx-5">
+          <div class="col">
+            <h1 class="display-5 fw-bold">안녕하세요 기유님!</h1>
+            <p class="col-md fs-4">
+              오늘도 열심히 알고리즘 공부합시다!
+            </p>
+          </div>
+
+          <div class="col">
+            <div class="p-3 mb-4 bg-dark rounded-3">
+              <p class="lead text-white">
+                오늘의 학습 진행상황
+              <p>
+            </div>
+            <div class="p-3 bg-dark rounded-3" >
+              <p class="lead text-white">
+                연속학습 일수
+              <p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -26,19 +44,79 @@
         <div class="h-100 p-5 text-white bg-dark rounded-3">
           <h2>추천 문제</h2>
           <p>오늘 학습 추천드리는 문제에양</p>
-          <!-- place for question-window-->
+
+          <div
+                  id="recommendedAutoplaying"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+          >
+            <div class="carousel-inner bg-dark">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#recommendedAutoplaying"
+                    data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#recommendedAutoplaying"
+                    data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
         </div>
       </div>
       <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>복습 문제</h2>
           <p>골딱이에게 복습을 권장 드리는 문제에양</p>
-          <!-- place for question-window-->
+
+          <div id="practiceAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#practiceAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#practiceAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
-
   </div>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
