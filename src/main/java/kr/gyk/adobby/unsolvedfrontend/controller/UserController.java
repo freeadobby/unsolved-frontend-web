@@ -1,8 +1,11 @@
 package kr.gyk.adobby.unsolvedfrontend.controller;
 
+import kr.gyk.adobby.unsolvedfrontend.dto.problem.ProblemDetailListDTO;
+import kr.gyk.adobby.unsolvedfrontend.service.ProblemService;
 import kr.gyk.adobby.unsolvedfrontend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RequiredArgsConstructor
@@ -10,9 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 
     private final UserService userService;
+    private final ProblemService problemService;
 
     @GetMapping("/user/myPage")
-    public String myPage(){
+    public String myPage(Model model){
+        ProblemDetailListDTO problemDetailListDTO = problemService.getProblem();
+        model.addAttribute("problemList", problemDetailListDTO);
         return "pages/myPage.html";
     }
 
@@ -30,5 +36,6 @@ public class UserController {
     public String myPageOverView(){
         return "pages/myPage_overView.html";
     }
+
 
 }

@@ -16,25 +16,30 @@
 
                 <div class="container py-4" style="width:500px; height:400px;
                 border-bottom:3px solid #b3b2b2; border-top:3px solid #b3b2b2">
-                    <div class="form-floating w-100 py-2" style="margin:auto">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" style="height:15px">
-                        <label for="email">아이디/이메일</label>
-                    </div>
-                    <div class="form-floating w-100 py-2" style="margin:auto">
-                        <input type="text" class="form-control" id="username" placeholder="username">
-                        <label for="username">이름</label>
-                    </div>
-                    <div class="form-floating w-100 py-2" style="margin:auto">
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                        <label for="password">패스워드</label>
-                    </div>
-                    <div class="form-floating w-100 py-2" style="margin:auto">
-                        <input type="text" class="form-control" id="baekjoon" placeholder="baekjoon">
-                        <label for="baekjoon">백준ID(선택)</label>
-                    </div>
-                    <button class="btn btn-primary w-25 fw-bold" type="submit" style="float:right">회원가입</button>
+                    <form th:action="@{/user}" th:object="${registerForm}" method="post">
+                        <div class="form-floating w-100 py-2" style="margin:auto">
+                            <input type="email" class="form-control" id="email"
+                                   placeholder="name@example.com" th:field="*{email}">
+                            <label for="email">아이디/이메일</label>
+                        </div>
+                        <div class="form-floating w-100 py-2" style="margin:auto">
+                            <input type="text" class="form-control" id="username"
+                                   placeholder="username" th:field="*{username}">
+                            <label for="username">이름</label>
+                        </div>
+                        <div class="form-floating w-100 py-2" style="margin:auto">
+                            <input type="password" class="form-control" id="password"
+                                   placeholder="Password" th:field="*{password}">
+                            <label for="password">패스워드</label>
+                        </div>
+                        <div class="form-floating w-100 py-2" style="margin:auto">
+                            <input type="text" class="form-control" id="baekjoon"
+                                   placeholder="baekjoon" th:field="*{baekjoon}">
+                            <label for="baekjoon">백준ID(선택)</label>
+                        </div>
+                        <button class="btn btn-primary w-25 fw-bold" type="submit" style="float:right">회원가입</button>
+                        </form>
                 </div>
-
             </div>
         </div>
     </div>
