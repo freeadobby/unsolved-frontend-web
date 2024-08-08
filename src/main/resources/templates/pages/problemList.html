@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout}">
+
+<div layout:fragment="content">
+    <div class="gap-3 p-2 row">
+        <span class="col-5 fw-bold" style="font-size: 25px">난이도별 문제</span>
+        <div style="width:8%"></div>
+        <span class="col-5 fw-bold" style="font-size: 25px">유형별 문제</span>
+    </div>
+    <div class="row">
+        <div class="col-5 accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Copper
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Cooper&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Cooper IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Cooper&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Cooper III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Cooper&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Cooper II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Cooper&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Cooper I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Bronze
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Bronze&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Bronze IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Bronze&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Bronze III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Bronze&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Bronze II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Bronze&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Bronze I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        Silver
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Silver&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Silver IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Silver&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Silver III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Silver&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Silver II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Silver&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Silver I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        Gold
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Gold&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Gold IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Gold&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Gold III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Gold&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Gold II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Gold&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Gold I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        Platinum
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Platinum&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Platinum IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Platinum&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Platinum III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Platinum&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Platinum II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Platinum&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Platinum I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        Emerald
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Emerald&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Emerald IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Emerald&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Emerald III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Emerald&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Emerald II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Emerald&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Emerald I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                        Diamond
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                    <div class="accordion-body">
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Diamond&num=IV" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Diamond IV</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Diamond&num=III" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Diamond III</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Diamond&num=II" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Diamond II</p>
+                            </a>
+                        </div>
+                        <div class="container" style="border-bottom: 2px solid lightgray; height: 40px">
+                            <a href="/problemList/tier?tierName=Diamond&num=I" class="lean text-decoration-none">
+                                <p style="font-size:20px; color:black">Diamond I</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width:9%"></div>
+        <ol class="col-5 list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=mathematics" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#수학</div>
+                        Mathematics
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">1301</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Implementation" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#구현</div>
+                        Implementation
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">516</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Data-Structure" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#자료구조</div>
+                        Data Structure
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Number-Theory" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#정수론</div>
+                        Number Theory
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Dynamic-Programming" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#동적 프로그래밍</div>
+                        Dynamic Programming
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Greedy" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#그리디</div>
+                        Greedy
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Search" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#탐색</div>
+                        Search
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Graph" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#그래프</div>
+                        Graph
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Tree" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#트리</div>
+                        Tree
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Two-Pointer" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#투 포인터</div>
+                        Two Pointer
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Shortest-Path" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#최단 경로</div>
+                        Shortest Path
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <a href="/problemList/type?typeName=Sort" class="text-decoration-none" style="color:black">
+                        <div class="fw-bold">#정렬</div>
+                        Sort
+                    </a>
+                </div>
+                <span class="badge text-bg-primary rounded-pill">3510</span>
+            </li>
+
+        </ol>
+
+    </div>
+
+</div>
+
+</html>

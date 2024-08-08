@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+<div layout:fragment="content">
+  <div class="p-2" style="width:1300px; height:70px; background-color:gray">
+    <span class="fw-bold" style="font-size:30px;color:white">
+      단계별 문제 목록 <span style="font-size:20px">[[${tierForm.getTierName}]] [[${tierForm.getNum}]]</span>
+    </span>
+  </div>
+  <p style="height:20px"></p>
+  <p class="d-flex fw-bolder" style="font-size:25px"></p>
+
+  <table style="width:100%; text-align: center">
+    <tr style="height:40px; border-bottom:3px lightgray solid">
+      <th style="width:10%">#</th>
+      <th style="width:55%">제목</th>
+      <th style="width:5%">Tag</th>
+      <th style="width:15%">푼 사람 수</th>
+      <th style="width:15%">평균 시도</th>
+    </tr>
+
+    <tr th:each="problem:${problemDetailList.problemList}" style="height:40px; border-bottom:3px lightgray solid">
+      <td><a href="#" class="text-decoration-none"
+             style="color:black">[[${problem.id}]]</a></td>
+      <td><a href="#" class="text-decoration-none"
+             style="color:black">[[${problem.title}]]</a></td>
+      <td class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Click</button>
+        <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+          <p th:each="tag:${problem.tags}">
+            #[[${tag.name}]]
+          </p>
+        </div>
+      </td>
+      <td>[[${problem.acceptedUserCount}]]</td>
+      <td>9.9</td>
+    </tr>
+
+  </table>
+</div>
+</html>
