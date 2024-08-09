@@ -26,4 +26,5 @@ public class ProblemService {
                 .bodyToMono(ProblemDetailListDTO.class)
                 .block();	// 동기식으로 처리
     }
+
 }

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class ProblemDetailDTO {
     Long id;
     String title;
+    Integer tier;
     Long acceptedUserCount;
     Boolean isSprout;
     Integer levelCustom;

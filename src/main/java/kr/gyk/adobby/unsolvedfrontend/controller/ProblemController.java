@@ -4,6 +4,7 @@ import kr.gyk.adobby.unsolvedfrontend.dto.problem.ProblemDetailDTO;
 import kr.gyk.adobby.unsolvedfrontend.dto.problem.ProblemDetailListDTO;
 import kr.gyk.adobby.unsolvedfrontend.dto.problem.ProblemTagDTO;
 import kr.gyk.adobby.unsolvedfrontend.form.TierForm;
+import kr.gyk.adobby.unsolvedfrontend.service.ProblemService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 @RequiredArgsConstructor
 @Controller
 public class ProblemController {
+
+    private final ProblemService problemService;
 
     @GetMapping("/problemList")
     public String problemList() {
@@ -40,12 +43,14 @@ public class ProblemController {
                 .build());
         arrayList.add(ProblemDetailDTO.builder()
                         .id(1234L)
+                        .tier(3)
                         .title("배현호가못푼문제")
                         .acceptedUserCount(123412L)
                         .tags(arrayList2)
                 .build());
         arrayList.add(ProblemDetailDTO.builder()
                 .id(123412321L)
+                .tier(21)
                 .title("배현호가푼문제")
                         .tags(arrayList2)
                         .acceptedUserCount(68679L)
@@ -59,9 +64,46 @@ public class ProblemController {
     }
 
     @GetMapping("/problemList/type")
-    public String problemListType(@RequestParam String typeName, Model model, Model problemModel) {
+    public String problemTypeList(@RequestParam String typeName, Model model, Model problemModel) {
         model.addAttribute("typeName", typeName);
 
+        ArrayList<ProblemTagDTO> arrayList2 = new ArrayList<>();
+        ArrayList<ProblemDetailDTO> arrayList = new ArrayList<>();
+        arrayList2.add(ProblemTagDTO.builder()
+                .name("구현")
+                .build());
+        arrayList2.add(ProblemTagDTO.builder()
+                .name("수학")
+                .build());
+        arrayList.add(ProblemDetailDTO.builder()
+                .id(1234L)
+                .tier(3)
+                .title("배현호가못푼문제")
+                .acceptedUserCount(123412L)
+                .tags(arrayList2)
+                .build());
+        arrayList.add(ProblemDetailDTO.builder()
+                .id(123412321L)
+                .tier(21)
+                .title("배현호가푼문제")
+                .tags(arrayList2)
+                .acceptedUserCount(68679L)
+                .build());
+        ProblemDetailListDTO problemListDTO = ProblemDetailListDTO.builder()
+                .problemList(arrayList)
+                .build();
+
+        problemModel.addAttribute("problemDetailList", problemListDTO);
+
         return "pages/problemTypeList";
+    }
+
+    @GetMapping("/problemList/total")
+    public String problemTotalList(Model problemModel) {
+        ProblemDetailListDTO problemListDTO = new ProblemDetailListDTO();
+        //TODO :: 전체 문제 받아오기
+        problemModel.addAttribute("problemDetailList", problemListDTO);
+
+        return "pages/problemTotalList";
     }
 }
