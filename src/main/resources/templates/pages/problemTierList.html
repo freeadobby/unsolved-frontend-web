@@ -6,7 +6,7 @@
 <div layout:fragment="content">
   <div class="p-2" style="width:100%; height:5%; background-color:gray">
     <span class="fw-bold" style="font-size:30px;color:white">
-      단계별 문제 목록 <span style="font-size:20px">[[${tierForm.getTierName}]] [[${tierForm.getNum}]]</span>
+      단계별 문제 목록 <span style="font-size:20px">[[${tierForm.tierName}]] [[${tierForm.num}]]</span>
     </span>
   </div>
 
@@ -49,6 +49,7 @@
       <td>[[${problem.acceptedUserCount}]]</td>
     </tr>
   </table>
+
 
 </div>
 </html>

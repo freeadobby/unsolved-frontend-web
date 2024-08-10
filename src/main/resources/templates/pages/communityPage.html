@@ -19,17 +19,17 @@
                 <th style="width:10%">조회수(필요없으면지워)</th>
             </tr>
 
-            <!-- questionList 에 문제목록 받으면 될 것 같음 !-->
+            <!-- questionList 에 질문목록 받으면 될 것 같고 !-->
             <tr th:each="question:${questionList}" style="border-bottom:2px lightgray solid">
-                <td><a href="#" class="text-decoration-none"
+                <td><a th:href="@{/community/detail(id=${question.id})}" class="text-decoration-none"
                        style="color:black">[[${question.id}]]</a></td>
-                <td><a href="#" class="text-decoration-none"
+                <td><a th:href="@{/community/detail(id=${question.id})}" class="text-decoration-none"
                        style="color:black">[[${question.title}]]</a></td>
                 <td>
                     <span>[[${question.tag}]]</span>
                 </td>
-                <td>대충 작성날짜를 넣어</td>
-                <td>대충 조회수를 넣어</td>
+                <td>[[${question.date}]]</td>
+                <td>[[${question.viewCount}]]</td>
             </tr>
         </table>
         <a class="btn btn-primary mt-3" style="float:right" href="/community/create" role="button">글 작성하기</a>
