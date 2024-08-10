@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+    <div layout:fragment="content">
+
+        <!-- 질문 상세 !-->
+        <div class="card">
+            <ul class="card-header">
+                <li class="py-1" style="width:20%; display:inline-block">작성자:[[${question.writer}]]</li>
+                <li style="width:10%; display:inline-block">날짜:[[${question.date}]]</li>
+                <li style="width:50%; display:inline-block">좋아요:[[${question.like}]]</li>
+                <li class="btn btn-outline-secondary"
+                    style="display:inline-block; float:right; width:5%; text-align:center; font-size: 70%">삭제</li>
+                <li class="btn btn-outline-secondary"
+                    style="display:inline-block; float:right; width:5%; text-align:center; font-size: 70%">수정</li>
+            </ul>
+            <div class="card-body">
+                <div class="card-text fw-bold" style="white-space:pre-line;">[[${question.title}]]</div>
+                <div class="card-text" style="white-space:pre-line;">[[${question.content}]]</div>
+            </div>
+        </div>
+        <!-- 답변 개수?인데 잘 모르겠는데 안되면 지워버려 !-->
+        <h5 class="border-bottom my-3 py-2"
+            th:text="|${#lists.size(question.answers)}개의 답변이 있습니다.|"></h5>
+
+        <!-- 답변 !-->
+        <div class="card" th:each="answer:${quesiton.answers}">
+            <ul class="card-header">
+                <li class="py-1" style="width:20%; display:inline-block">작성자:[[${answer.writer}]]</li>
+                <li style="width:10%; display:inline-block">날짜:[[${answer.date}]]</li>
+                <li style="width:50%; display:inline-block">좋아요:[[${answer.like}]]</li>
+                <li class="btn btn-outline-secondary"
+                    style="display:inline-block; float:right; width:5%; text-align:center; font-size: 70%">삭제</li>
+                <li class="btn btn-outline-secondary"
+                    style="display:inline-block; float:right; width:5%; text-align:center; font-size: 70%">수정</li>
+            </ul>
+            <div class="card-body">
+                <div class="card-text fw-bold" style="white-space:pre-line;">[[${answer.title}]]</div>
+                <div class="card-text" style="white-space:pre-line;">[[${answer.content}]]</div>
+            </div>
+        </div>
+
+        <form th:action="@{|/answer/create/${question.id}|}" method="post" class="my-3">
+            <textarea name="content" id="content" rows="10" class="form-control"></textarea>
+            <input type="submit" value="답변등록" class="btn btn-primary my-2">
+        </form>
+
+    </div>
+</html>
