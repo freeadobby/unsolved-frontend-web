@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+    <div layout:fragment="content">
+        <div class="p-2" style="width:100%; height:5%; background-color:gray">
+            <span class="fw-bold" style="font-size:30px;color:white">
+                커뮤니티 <span style="font-size:20px">소통하세요!</span>
+            </span>
+        </div>
+
+        <table class="mt-3" style="width:100%; text-align: center">
+            <tr class="container" style="border-bottom:2px lightgray solid">
+                <th style="width:20%">문제 번호</th>
+                <th style="width:30%">제목</th>
+                <th style="width:20%">Tag</th>
+                <th style="width:10%">작성자</th>
+                <th style="width:20%">작성 날짜</th>
+            </tr>
+
+            <!-- questionList 에 질문목록 받으면 될 것 같음. id는 질문 고유 id고 problemId는 문제 id임 !-->
+            <tr th:each="question:${questionList}" style="border-bottom:2px lightgray solid">
+                <td><a th:href="@{/community/detail(id=${question.id})}" class="text-decoration-none"
+                       style="color:black">[[${question.problemId}]]</a></td>
+                <td><a th:href="@{/community/detail(id=${question.id})}" class="text-decoration-none"
+                       style="color:black">[[${question.subject}]]</a></td>
+                <td>[[${question.tag}]]</td>
+                <td>[[${question.writer}]]</td>
+                <td>[[${question.createTime}]]</td>
+            </tr>
+        </table>
+        <a class="btn btn-primary mt-3" style="float:right" href="/community/create" role="button">글 작성하기</a>
+    </div>
+</html>
